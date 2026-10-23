@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Add to Project
-        uses: actions/add-to-project@v1
+        uses: actions/add-to-project@v2
         with:
           project-url: https://github.com/orgs/UCSCRocketry/projects/12
           github-token: ${{ secrets.PROJECT_AUTOMATION_TOKEN }}
