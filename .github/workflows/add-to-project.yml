@@ -1,0 +1,21 @@
+# Adds every new or newly labeled issue / PR to the "Polyphemus" org project.
+# Requires a PROJECT_AUTOMATION_TOKEN repo/org secret: a PAT with the "project" scope
+# (classic) or Projects read/write (fine-grained) -- the default GITHUB_TOKEN can't
+# write to org projects.
+name: Auto Add to Project
+
+on:
+  issues:
+    types: [opened, labeled]
+  pull_request:
+    types: [opened, labeled]
+
+jobs:
+  add-to-project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add to Project
+        uses: actions/add-to-project@v1
+        with:
+          project-url: https://github.com/orgs/UCSCRocketry/projects/12
+          github-token: ${{ secrets.PROJECT_AUTOMATION_TOKEN }}
