@@ -921,6 +921,27 @@
 			(embedded_fonts no)
 		)
 	)
+	(text_box "SD card should be routed in 50 ohm"
+		(exclude_from_sim no)
+		(at 162.56 35.56 0)
+		(size 19.05 8.0376)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 255 255 0 1)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "0779082b-75ad-418b-aa04-1b334be0404d")
+	)
 	(junction
 		(at 193.04 92.71)
 		(diameter 0)
